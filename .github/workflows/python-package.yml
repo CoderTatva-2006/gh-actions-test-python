@@ -30,7 +30,6 @@ jobs:
         python -m pip install pyinstaller
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         pyinstaller main.py --onefile
-        cat main/dist/main
   build_on_win:
 
     runs-on: windows-latest
@@ -50,5 +49,4 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pyinstaller
         pyinstaller main.py --onefile
-        type main/dist/main.exe
-  
+          
